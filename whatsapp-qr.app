@@ -1,3 +1,4 @@
+import streamlit as st
 import urllib.request, urllib.error
 import ftplib
 path = "C:\\Users\\tapan\\OneDrive\\Desktop\\whatbot\\qrcodedecode\\"
