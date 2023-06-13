@@ -187,7 +187,7 @@ while looper==0:
 
     healthtime1 = int(time.time())
     print(healthtime1)
-    if healthtime1 - healthtime > 100:
+    if healthtime1 - healthtime > 1800:
         phonejn = "+91" + "6398370244"
         url = "https://panel.rapiwha.com/send_message.php"
         querystring = {"apikey": api, "number": phonejn,
