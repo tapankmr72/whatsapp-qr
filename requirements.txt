@@ -1,0 +1,4 @@
+qrcode
+zxingcpp
+numpy
+cv2
