@@ -1,8 +1,6 @@
-import streamlit as st
-import urllib.request, urllib.error
+import urllib.request
 import ftplib
 path = ""
-#hello
 import time
 from datetime import datetime,timedelta
 import json
@@ -102,9 +100,7 @@ while looper==0:
            text = ""
            img = cv2.imread(path + "decoded" + mime)
            np_arr = numpy.array(img)
-
            result = zxingcpp.read_barcodes(np_arr)
-
            for r in result:
                text = r.text.encode(encoding='UTF-8')
            if text != "":
@@ -120,7 +116,7 @@ while looper==0:
            elif text == "":
                phonejn = "+91" + numbertext
                url = "https://panel.rapiwha.com/send_message.php"
-               querystring = {"apikey": api, "number": phonejn, "text": "Sent image does not contain a QR Code. Please send a QR code imgae only "}
+               querystring = {"apikey": api, "number": phonejn, "text": "Sent image does not contain a QR Code. Please send a QR code image only "}
                response = requests.request("GET", url, params=querystring)
                time.sleep(0.5)
                print(response.text)
@@ -184,10 +180,9 @@ while looper==0:
       updatetext = int(updatetext1)+1
       updatefile.write(str(updatetext))
       updatefile.close()
-
     healthtime1 = int(time.time())
     print(healthtime1)
-    if healthtime1 - healthtime > 1800:
+    if healthtime1 - healthtime > 3600:
         phonejn = "+91" + "6398370244"
         url = "https://panel.rapiwha.com/send_message.php"
         querystring = {"apikey": api, "number": phonejn,
@@ -196,7 +191,4 @@ while looper==0:
         #time.sleep(0.5)
         print(response.text)
         healthtime = healthtime1
-
-
     print("Offset ID in Text File updated succesfully")
-
