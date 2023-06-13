@@ -1,4 +1,6 @@
+streamlit
 qrcode
-zxingcpp
+openpyxl
+opencv-contrib-python-headless
 numpy
-cv2
+zxing-cpp
