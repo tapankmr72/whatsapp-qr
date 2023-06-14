@@ -15,7 +15,7 @@ updatetext1=0
 message = ""
 healthmessage="This is health message of QR coder/Decoder Whatsapp BOT. It is running fine and you are receiving this message every 60 minutes "
 healthtime = int(time.time())
-api="9VCT9UPA8KX4M99P2U4I"
+#api="9VCT9UPA8KX4M99P2U4I"
 param1= "apikey=9VCT9UPA8KX4M99P2U4I&type=IN&getnotpulledonly=1"
 param2="apikey=9VCT9UPA8KX4M99P2U4I&type=IN&markaspulled=1&getnotpulledonly=1"
 polltime=2
